@@ -135,13 +135,11 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 
 - Microsoft Office Add-ins ekibi
 - LM Studio geliştiricileri
-- Açık kaynak topluluğu
-- Tüm katkıda bulunanlar
 
 ## 📞 İletişim / Contact
 
-- **GitHub Issues**: [Proje Issues](https://github.com/[username]/excel-ai-assistant/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/[username]/excel-ai-assistant/discussions)
+- **GitHub Issues**: [Proje Issues](https://github.com/ilberpy/excel-ai-assistant/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/ilberpy/excel-ai-assistant/discussions)
 
 ---
 
