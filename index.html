@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Excel AI Assistant</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+
+    <!-- Template styles -->
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="app-container">
+        <!-- Top Header -->
+        <header class="app-header">
+            <div class="header-left">
+                <span class="header-title">Excel AI Assistant</span>
+            </div>
+            <div class="header-center">
+                <div class="tab-button">No content</div>
+            </div>
+            <div class="header-right">
+                <button class="header-btn" id="newChatBtn">+</button>
+                <button class="header-btn" id="historyBtn">⏰</button>
+                <button class="header-btn" id="menuBtn">⋯</button>
+                <button class="header-btn" id="closeBtn">×</button>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div id="chat-container">
+                <!-- AI responses will appear here and flow upward -->
+            </div>
+            
+                    <!-- Loading indicator -->
+        <div id="loadingIndicator" class="loading-indicator" style="display: none;">
+            <div class="loading-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+        
+        
+        </main>
+
+        <!-- Bottom Command Bar -->
+        <footer class="command-bar">
+            <div class="command-left">
+                <div class="command-icon">@</div>
+                <div class="tab-info">
+                    <div class="tab-icon">📄</div>
+                    <span>1 Tab</span>
+                </div>
+            </div>
+            
+            <div class="command-center">
+                <div class="shortcut-info">Ctrl+^</div>
+                <div class="auto-info">
+                    Auto <span class="caret">^</span>
+                </div>
+            </div>
+            
+            <div class="command-right">
+                <button class="command-btn" id="imageBtn">🖼️</button>
+                <button class="command-btn" id="voiceBtn">🎤</button>
+            </div>
+        </footer>
+
+        <!-- Fixed Command Input -->
+        <div class="command-input-container">
+            <div class="command-input-wrapper">
+                <input type="text" 
+                       id="aiCommandInput" 
+                       class="command-input" 
+                       placeholder="Plan, search, build anything..."
+                       autocomplete="off">
+                <!-- Stop Response Button - Input right side -->
+                <button id="stopResponseBtn" class="stop-response-btn" style="display: none;">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <rect x="2" y="2" width="12" height="12" rx="1" fill="currentColor"/>
+                    </svg>
+                    Durdur
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Client Script -->
+    <script src="ai_client.js"></script>
+    <!-- Ana Uygulama Script -->
+    <script src="app.js"></script>
+</body>
+</html>
