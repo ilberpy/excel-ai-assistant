@@ -53,7 +53,7 @@ The first open-source local AI-powered Excel assistant tool
 
 2. **Proje Kurulumu**
    ```bash
-   git clone https://github.com/[username]/excel-ai-assistant.git
+   git clone https://github.com/ilberpy/excel-ai-assistant.git
    cd excel-ai-assistant
    npm install
    ```
