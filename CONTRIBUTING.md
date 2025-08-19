@@ -193,7 +193,7 @@ describe('AI Client', () => {
 
 ### Güvenlik Açığı Bildirimi / Security Vulnerability Report
 Güvenlik açığı bulduysanız:
-1. **Özel olarak bildirin**: security@example.com
+1. **Özel olarak bildirin**: ilberberrin@gmail.com
 2. **Hemen yayınlamayın**
 3. **Detaylı bilgi verin**
 4. **Proof of concept ekleyin**
