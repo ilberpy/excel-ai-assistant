@@ -1,7 +1,7 @@
 // LM Studio AI Client
 class LMStudioClient {
     constructor() {
-        this.baseUrl = 'http://192.168.1.35:1234';
+        this.baseUrl = 'http://192.168.1.5:1234';
         this.apiEndpoint = `${this.baseUrl}/v1/chat/completions`;
         this.currentModel = 'openai/gpt-oss-20b';
         this.availableModels = [];

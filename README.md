@@ -1,86 +1,86 @@
-# Excel AI Assistant - Excel Yapay Zeka Yardımcısı
+# Excel AI Assistant
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Office Add-in](https://img.shields.io/badge/Office%20Add--in-Excel-blue.svg)](https://docs.microsoft.com/en-us/office/dev/add-ins/)
 
-**İlk açık kaynak kodlu local yapay zeka destekli Excel yardımcı aracı**
+**The first open-source local AI-powered Excel assistant tool**
 
-The first open-source local AI-powered Excel assistant tool
+A powerful Excel add-in that integrates with local AI models (LM Studio) to provide intelligent data analysis, automated Excel operations, and natural language processing capabilities - all while keeping your data completely local and secure.
 
-## 🌟 Özellikler / Features
+## 🌟 Features
 
-### 🤖 AI Entegrasyonu / AI Integration
-- **Local AI Model Desteği**: LM Studio ile entegrasyon
-- **Gerçek Zamanlı Yanıtlar**: ChatGPT benzeri streaming yanıtlar
-- **Çoklu Model Seçimi**: Yüklü AI modelleri arasından seçim
-- **Akıllı Veri Analizi**: Otomatik veri analizi ve Excel işlemleri
+### 🤖 AI Integration
+- **Local AI Model Support**: Integration with LM Studio for complete data privacy
+- **Real-time Streaming Responses**: ChatGPT-like streaming responses
+- **Multi-Model Selection**: Choose from available AI models
+- **Intelligent Data Analysis**: Automatic data analysis and Excel operations
 
-### 📊 Excel İşlemleri / Excel Operations
-- **Otomatik Grafik Oluşturma**: Veriye göre akıllı grafik seçimi
-- **Akıllı Formatlama**: Otomatik tablo formatlaması ve renklendirme
-- **Veri Filtreleme**: Gelişmiş filtreleme ve sıralama
-- **Hesaplama**: Otomatik toplam, ortalama ve istatistik hesaplamaları
-- **Trend Analizi**: Veri trendlerini otomatik tespit etme
-- **Anomali Tespiti**: Veri anormalliklerini bulma
+### 📊 Excel Operations
+- **Automatic Chart Creation**: Smart chart selection based on data
+- **Smart Formatting**: Automatic table formatting and color coding
+- **Data Filtering**: Advanced filtering and sorting capabilities
+- **Calculations**: Automatic sum, average, and statistical calculations
+- **Trend Analysis**: Automatic data trend detection
+- **Anomaly Detection**: Find data abnormalities automatically
 
-### 💬 Sohbet Arayüzü / Chat Interface
-- **Modern Dark Theme**: Cursor benzeri koyu tema
-- **Sohbet Geçmişi**: Kalıcı sohbet kayıtları
-- **Otomatik Kaydırma**: AI yazarken otomatik ekran kaydırma
-- **Yanıt Durdurma**: AI yanıtını istediğiniz zaman durdurma
-- **Ses ve Görsel Giriş**: Ses komutları ve resim yükleme desteği
+### 💬 Chat Interface
+- **Modern Dark Theme**: Cursor-like dark theme design
+- **Chat History**: Persistent chat records with load/delete functionality
+- **Auto-scrolling**: Automatic screen scrolling while AI is typing
+- **Response Control**: Stop AI responses at any time
+- **Voice and Visual Input**: Voice commands and image upload support
 
-### ⚙️ Ayarlar ve Özelleştirme / Settings & Customization
-- **Tema Seçimi**: Koyu, açık ve mavi tema seçenekleri
-- **Excel Ayarları**: Grafik türü, boyut, otomatik formatlama
-- **AI Model Yönetimi**: Model bağlantı testi ve güncelleme
-- **Kullanıcı Tercihleri**: Kişiselleştirilebilir ayarlar
+### ⚙️ Settings & Customization
+- **Theme Selection**: Dark, light, and blue theme options
+- **Excel Settings**: Chart types, sizes, automatic formatting preferences
+- **AI Model Management**: Model connection testing and updates
+- **User Preferences**: Personalized settings and configurations
 
-## 🚀 Kurulum / Installation
+## 🚀 Installation
 
-### Gereksinimler / Requirements
-- Microsoft Excel (Desktop veya Online)
+### Requirements
+- Microsoft Excel (Desktop or Online)
 - LM Studio (Local AI model server)
-- Modern web tarayıcısı
+- Modern web browser
 
-### Adımlar / Steps
+### Steps
 
-1. **LM Studio Kurulumu**
+1. **Install LM Studio**
    ```bash
-   # LM Studio'yu indirin ve kurun
+   # Download and install LM Studio
    # https://lmstudio.ai/
    ```
 
-2. **Proje Kurulumu**
+2. **Project Setup**
    ```bash
    git clone https://github.com/ilberpy/excel-ai-assistant.git
    cd excel-ai-assistant
    npm install
    ```
 
-3. **AI Model Yapılandırması**
+3. **AI Model Configuration**
    ```bash
-   # LM Studio'da model yükleyin
-   # API sunucusunu başlatın (port 1234)
+   # Load models in LM Studio
+   # Start API server (port 1234)
    ```
 
-4. **Excel Add-in Kurulumu**
+4. **Excel Add-in Installation**
    ```bash
    npm run start
-   # Excel'de Developer > Add-ins > Upload My Add-in
+   # In Excel: Developer > Add-ins > Upload My Add-in
    ```
 
-## 🔧 Yapılandırma / Configuration
+## 🔧 Configuration
 
-### LM Studio Bağlantısı
+### LM Studio Connection
 ```javascript
 // ai_client.js
-const baseUrl = 'http://192.168.1.35:1234'; // Kendi IP adresinizi girin
+const baseUrl = 'http://192.168.1.5:1234'; // Enter your own IP address
 ```
 
-### Excel Ayarları
+### Excel Settings
 ```javascript
-// Excel ayarları localStorage'da saklanır
+// Excel settings are stored in localStorage
 {
   "chartType": "ColumnClustered",
   "autoFormatting": true,
@@ -89,62 +89,60 @@ const baseUrl = 'http://192.168.1.35:1234'; // Kendi IP adresinizi girin
 }
 ```
 
-## 📖 Kullanım / Usage
+## 📖 Usage
 
-### Temel Komutlar / Basic Commands
-- **"Bu veriyi analiz et"** - Seçili veriyi akıllı analiz
-- **"Grafik oluştur"** - Otomatik grafik oluşturma
-- **"Toplam hesapla"** - Sütun toplamları
-- **"Filtrele"** - Akıllı veri filtreleme
-- **"Formatla"** - Otomatik tablo formatlaması
+### Basic Commands
+- **"Analyze this data"** - Intelligent analysis of selected data
+- **"Create a chart"** - Automatic chart generation
+- **"Calculate totals"** - Column sum calculations
+- **"Filter data"** - Smart data filtering
+- **"Format table"** - Automatic table formatting
 
-### Gelişmiş Özellikler / Advanced Features
-- **Ses Komutları**: Mikrofon ile komut verme
-- **Resim Analizi**: Resim yükleyerek AI analizi
-- **Sohbet Geçmişi**: Önceki sohbetleri yeniden açma
-- **Tema Özelleştirme**: Kişisel tema seçimi
+### Advanced Features
+- **Voice Commands**: Give commands via microphone
+- **Image Analysis**: Upload images for AI analysis
+- **Chat History**: Reopen previous conversations
+- **Theme Customization**: Personal theme selection
 
-## 🏗️ Mimari / Architecture
+## 🏗️ Architecture
 
 ```
 excel-ai-assistant/
-├── app.js              # Ana uygulama mantığı
-├── ai_client.js        # AI API istemcisi
-├── index.html          # Kullanıcı arayüzü
-├── styles.css          # Stil tanımları
+├── app.js              # Main application logic
+├── ai_client.js        # AI API client
+├── index.html          # User interface
+├── styles.css          # Style definitions
 ├── manifest.xml        # Office Add-in manifest
-├── package.json        # Proje bağımlılıkları
-└── README.md           # Proje dokümantasyonu
+├── package.json        # Project dependencies
+└── README.md           # Project documentation
 ```
 
-## 🤝 Katkıda Bulunma / Contributing
+## 🤝 Contributing
 
-Bu proje açık kaynak kodludur ve katkılarınızı bekliyoruz!
+This project is open source and we welcome your contributions!
 
-1. Fork yapın
-2. Feature branch oluşturun (`git checkout -b feature/AmazingFeature`)
-3. Değişikliklerinizi commit edin (`git commit -m 'Add some AmazingFeature'`)
-4. Branch'inizi push edin (`git push origin feature/AmazingFeature`)
-5. Pull Request oluşturun
+1. Fork the project
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## 📄 Lisans / License
+## 📄 License
 
-Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## 🙏 Teşekkürler / Acknowledgments
+## 🙏 Acknowledgments
 
-- Microsoft Office Add-ins ekibi
-- LM Studio geliştiricileri
-- Açık kaynak topluluğu
-- Tüm katkıda bulunanlar
+- Microsoft Office Add-ins team
+- LM Studio developers
+- Open source community
+- All contributors
 
-## 📞 İletişim / Contact
+## 📞 Contact
 
-- **GitHub Issues**: [Proje Issues](https://github.com/[username]/excel-ai-assistant/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/[username]/excel-ai-assistant/discussions)
+- **GitHub Issues**: [Project Issues](https://github.com/ilberpy/excel-ai-assistant/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/ilberpy/excel-ai-assistant/discussions)
 
 ---
-
-**⭐ Bu projeyi beğendiyseniz yıldız vermeyi unutmayın!**
 
 **⭐ If you like this project, don't forget to give it a star!**
