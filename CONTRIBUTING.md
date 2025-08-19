@@ -15,7 +15,7 @@ Thank you for wanting to contribute to this project! This guide explains how you
 ### Kurulum / Setup
 ```bash
 # Repo'yu fork edin ve clone yapın
-git clone https://github.com/YOUR_USERNAME/excel-ai-assistant.git
+git clone https://github.com/ilberpy/excel-ai-assistant.git
 cd excel-ai-assistant
 
 # Bağımlılıkları yükleyin
