@@ -61,32 +61,32 @@ jobs:
         name: build-files
         path: dist/
   
-  deploy:
-    runs-on: ubuntu-latest
-    needs: [test, build]
-    if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
-    
-    steps:
-    - uses: actions/checkout@v4
-    
-    - name: Download build artifacts
-      uses: actions/download-artifact@v4
-      with:
-        name: build-files
-        path: ./dist
-    
-    - name: Setup Pages
-      uses: actions/configure-pages@v4
-    
-    - name: Upload to Pages
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: ./dist
-    
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #   needs: [test, build]
+  #   if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
+  #   permissions:
+  #     contents: write
+  #     pages: write
+  #     id-token: write
+  #   
+  #   steps:
+  #   - uses: actions/checkout@v4
+  #   
+  #   - name: Download build artifacts
+  #     uses: actions/download-artifact@v4
+  #     with:
+  #       name: build-files
+  #       path: ./dist
+  #   
+  #   - name: Setup Pages
+  #     uses: actions/configure-pages@v4
+  #   
+  #   - name: Upload to Pages
+  #     uses: actions/upload-pages-artifact@v3
+  #     with:
+  #       path: ./dist
+  #   
+  #   - name: Deploy to GitHub Pages
+  #     id: deployment
+  #     uses: actions/deploy-pages@v4
