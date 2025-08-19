@@ -13,11 +13,11 @@
 
   <!--Version. Updates from the store only get triggered if there is a version change. -->
   <Version>1.0.0.0</Version>
-  <ProviderName>Excel Add-in Örneği</ProviderName>
+  <ProviderName>Excel AI Assistant</ProviderName>
   <DefaultLocale>tr-TR</DefaultLocale>
   <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
-  <DisplayName DefaultValue="Excel Add-in Örneği" />
-  <Description DefaultValue="Excel'de çalışan örnek add-in uygulaması" />
+  <DisplayName DefaultValue="Excel AI Assistant" />
+  <Description DefaultValue="Local AI-powered Excel assistant tool with LM Studio integration" />
 
   <!-- Icon for your add-in. Used on installation screens and the add-ins dialog. -->
   <IconUrl DefaultValue="http://localhost:3000/assets/icon-32.png"/>
@@ -124,14 +124,14 @@
       </bt:Urls>
       <!-- ShortStrings for commands. -->
       <bt:ShortStrings>
-        <bt:String id="GetStarted.Title" DefaultValue="Excel Add-in'i başlatın!" />
-        <bt:String id="CommandsGroup.Label" DefaultValue="Excel Add-in" />
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Add-in'i Aç" />
+        <bt:String id="GetStarted.Title" DefaultValue="Start Excel AI Assistant!" />
+        <bt:String id="CommandsGroup.Label" DefaultValue="Excel AI Assistant" />
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Open AI Assistant" />
       </bt:ShortStrings>
       <!-- LongStrings for commands. -->
       <bt:LongStrings>
-        <bt:String id="GetStarted.Description" DefaultValue="Excel Add-in'iniz başarıyla yüklendi. Şimdi kullanmaya başlayabilirsiniz." />
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Excel Add-in'i açmak için tıklayın" />
+        <bt:String id="GetStarted.Description" DefaultValue="Your Excel AI Assistant has been successfully installed. You can now start using the AI-powered Excel assistant." />
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to open Excel AI Assistant" />
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>

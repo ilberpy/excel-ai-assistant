@@ -1,7 +1,7 @@
 {
-  "name": "excel-ai-addin",
+  "name": "excel-ai-assistant",
   "version": "2.0.0",
-  "description": "AI destekli Excel add-in uygulaması - LM Studio entegrasyonu ile",
+  "description": "Excel AI Assistant - Local AI-powered Excel assistant tool with LM Studio integration",
   "main": "index.html",
   "scripts": {
     "start": "http-server -p 3000 -c-1 --cors",
@@ -15,7 +15,7 @@
     "office",
     "javascript"
   ],
-  "author": "Excel Add-in Geliştirici",
+  "author": "Excel AI Assistant Team",
   "license": "MIT",
   "devDependencies": {
     "http-server": "^14.1.1"
