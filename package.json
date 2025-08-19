@@ -1,7 +1,7 @@
 {
   "name": "excel-ai-assistant",
   "version": "2.0.0",
-  "description": "Excel AI Assistant - Local AI-powered Excel assistant tool with LM Studio integration",
+  "description": "Excel AI Assistant - Local yapay zeka destekli Excel yardımcı aracı - LM Studio entegrasyonu ile",
   "main": "index.html",
   "scripts": {
     "start": "http-server -p 3000 -c-1 --cors",
