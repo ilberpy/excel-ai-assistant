@@ -7,7 +7,9 @@
     "start": "http-server -p 3000 -c-1 --cors",
     "dev": "http-server -p 3000 -c-1 --cors -o",
     "build": "echo 'Build completed'",
-    "test": "echo 'No tests specified'"
+    "test": "echo 'No tests specified'",
+    "update-ip": "node update_ip.js",
+    "start-auto": "./start.sh"
   },
   "keywords": [
     "excel",

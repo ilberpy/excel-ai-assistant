@@ -1,9 +1,9 @@
-// LM Studio AI Client
-class LMStudioClient {
+// Ollama AI Client
+class OllamaClient {
     constructor() {
-        this.baseUrl = 'http://192.168.1.5:1234';
-        this.apiEndpoint = `${this.baseUrl}/v1/chat/completions`;
-        this.currentModel = 'openai/gpt-oss-20b';
+        this.baseUrl = 'http://192.168.1.24:11434';
+        this.apiEndpoint = `${this.baseUrl}/api/chat`;
+        this.currentModel = 'llama2';
         this.availableModels = [];
         this.maxTokens = 2000;
         this.temperature = 0.7;
@@ -20,13 +20,13 @@ class LMStudioClient {
     // API bağlantısını test et
     async testConnection() {
         try {
-            const response = await fetch(`${this.baseUrl}/v1/models`, {
+            const response = await fetch(`${this.baseUrl}/api/tags`, {
                 method: 'GET',
                 timeout: this.timeout
             });
             return response.ok;
         } catch (error) {
-            console.error('LM Studio bağlantı hatası:', error);
+            console.error('Ollama bağlantı hatası:', error);
             return false;
         }
     }
@@ -34,14 +34,14 @@ class LMStudioClient {
     // Mevcut modelleri yükler
     async loadAvailableModels() {
         try {
-            const response = await fetch(`${this.baseUrl}/v1/models`, {
+            const response = await fetch(`${this.baseUrl}/api/tags`, {
                 method: 'GET',
                 timeout: this.timeout
             });
             
             if (response.ok) {
                 const modelsData = await response.json();
-                this.availableModels = modelsData.data.map(model => model.id);
+                this.availableModels = modelsData.models.map(model => model.name);
                 
                 if (this.availableModels.length > 0 && !this.availableModels.includes(this.currentModel)) {
                     this.currentModel = this.availableModels[0];
@@ -102,8 +102,10 @@ class LMStudioClient {
             const payload = {
                 model: this.currentModel,
                 messages: messages,
-                max_tokens: this.maxTokens,
-                temperature: this.temperature,
+                options: {
+                    num_predict: this.maxTokens,
+                    temperature: this.temperature
+                },
                 stream: false
             };
 
@@ -117,7 +119,7 @@ class LMStudioClient {
 
             if (response.ok) {
                 const result = await response.json();
-                return result.choices[0].message.content;
+                return result.message.content;
             } else {
                 throw new Error(`API Hatası: ${response.status}`);
             }
@@ -139,8 +141,10 @@ class LMStudioClient {
             const payload = {
                 model: this.currentModel,
                 messages: messages,
-                max_tokens: this.maxTokens,
-                temperature: this.temperature,
+                options: {
+                    num_predict: this.maxTokens,
+                    temperature: this.temperature
+                },
                 stream: true
             };
 

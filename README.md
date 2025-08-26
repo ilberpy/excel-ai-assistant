@@ -19,7 +19,7 @@ A powerful Excel add-in that integrates with local AI models (LM Studio) to prov
 - **Automatic Chart Creation**: Smart chart selection based on data
 - **Smart Formatting**: Automatic table formatting and color coding
 - **Data Filtering**: Advanced filtering and sorting capabilities
-- **Calculations**: Automatic sum, average, and statistical calculations
+- **Calculations**: Automatic sum, average, and statistical calculations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
 - **Trend Analysis**: Automatic data trend detection
 - **Anomaly Detection**: Find data abnormalities automatically
 
@@ -40,15 +40,15 @@ A powerful Excel add-in that integrates with local AI models (LM Studio) to prov
 
 ### Requirements
 - Microsoft Excel (Desktop or Online)
-- LM Studio (Local AI model server)
+- Ollama (Local AI model server)
 - Modern web browser
 
 ### Steps
 
-1. **Install LM Studio**
+1. **Install Ollama**
    ```bash
-   # Download and install LM Studio
-   # https://lmstudio.ai/
+   # Download and install Ollama
+   # https://ollama.ai/
    ```
 
 2. **Project Setup**
@@ -60,22 +60,33 @@ A powerful Excel add-in that integrates with local AI models (LM Studio) to prov
 
 3. **AI Model Configuration**
    ```bash
-   # Load models in LM Studio
-   # Start API server (port 1234)
+   # Pull models in Ollama
+   # Start Ollama server (default port 11434)
    ```
 
 4. **Excel Add-in Installation**
    ```bash
-   npm run start
+   # Otomatik IP güncelleme ve başlatma (önerilen)
+   npm run start-auto
+   
+   # Veya manuel olarak
+   npm start
+   
    # In Excel: Developer > Add-ins > Upload My Add-in
    ```
 
 ## 🔧 Configuration
 
-### LM Studio Connection
+### 🚀 Otomatik IP Güncelleme
+IP adresinizi otomatik olarak tespit edip güncellemek için:
+```bash
+npm run update-ip
+```
+
+### Ollama Connection
 ```javascript
 // ai_client.js
-const baseUrl = 'http://192.168.1.5:1234'; // Enter your own IP address
+const baseUrl = 'http://192.168.1.24:11434'; // Enter your own IP address
 ```
 
 ### Excel Settings
@@ -134,7 +145,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## 🙏 Acknowledgments
 
 - Microsoft Office Add-ins team
-- LM Studio developers
+- Ollama developers
 - Open source community
 - All contributors
 
